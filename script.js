@@ -165,6 +165,20 @@ function main() {
         catagory.addEventListener("click", listItems);
     })
 
+    let catagory;
+    while (catagory == undefined || catagory.startsWith('>>')) {
+        console.log(catagory);
+        catagory = Object.keys(menu)[Math.floor(Math.random()* Object.keys(menu).length)];
+    }
+
+    let item;
+    while (item == undefined || item.startsWith('gap')) {
+        console.log(item);
+        item = Object.keys(menu[catagory])[Math.floor(Math.random()* Object.keys(menu[catagory]).length)];
+    }
+
+    alert(item + " with nothing");
+
     console.log("done");
 }
 
