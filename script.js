@@ -87,7 +87,7 @@ extraMenu = {
     "gap21":"",
     "gap22":"",
     "gap23":"",
-    "Regular Ice": "red",
+    "Regular Ice": "green",
     "Less Ice": "green",
     "No Ice": "green",
     "Hot": "green",
@@ -95,7 +95,7 @@ extraMenu = {
     "gap32":"",
     "gap33":"",
     "gap34":"",
-    "Cup Fee Yes": "red",
+    "Cup Fee Yes": "orange",
     "Cup Fee No": "orange",
     "gap41":"",
     "gap42":"",
@@ -142,6 +142,10 @@ function listItems() {
 
 }
 
+function selectExtra() {
+    this.classList.toggle("red");
+}
+
 function listExtras() {
     const header = document.querySelector("header");
     header.classList.add("hidden");
@@ -150,6 +154,7 @@ function listExtras() {
 
     Object.keys(extraMenu).forEach(function(extra) {
         extraitem = createBut(extra, "main", extraMenu[extra]!=""? extraMenu[extra]: "invis");
+        extraitem.addEventListener("click", selectExtra);
     })
 
 }
