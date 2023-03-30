@@ -1,0 +1,62 @@
+.hidden {
+    display: none;
+}
+
+.invis {
+    visibility: hidden;
+}
+
+.green {
+    background-color: rgb(35, 170, 42);
+}
+
+.red {
+    background-color: rgb(197, 32, 32);
+}
+
+
+body {
+    background-color: gray;
+}
+
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+button {
+    border: none;
+    color: black;
+    padding: 32px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+
+    flex: 1 1 0;
+    width: 0;
+}
+
+header>button {
+    background-color: rgb(207, 207, 207);
+}
+
+main>button {
+    background-color: rgb(192, 192, 26);
+    flex: 1 0 17%; 
+
+}
+
+.hidden+main>button {
+    flex: 1 0 12%; 
+}
